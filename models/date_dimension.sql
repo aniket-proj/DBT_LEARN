@@ -5,7 +5,7 @@ with cte as (
     HOUR(to_timestamp(STARTED_AT)) AS HOUR_STARTED_AT,
 
     CASE 
-    WHEN DAYNAME(to_timestamp(STARTED_AT)) IN ('sat','sun')
+    WHEN DAYNAME(to_timestamp(STARTED_AT)) IN ('Sat','Sun')
     then 'WEEKEND'
     ELSE 'BUSINESSDAY'
     END AS DAY_TYPE,
