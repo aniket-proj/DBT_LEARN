@@ -18,3 +18,10 @@ ELSE 'AUTUMN'
 END
 {% endmacro %}
 
+{% macro DAY_TYPE(x) %}
+ CASE 
+    WHEN DAYNAME(TO_TIMESTAMP({{x}})) IN ('Sat','Sun')
+    then 'WEEKEND'
+    ELSE 'BUSINESSDAY'
+    END 
+{% endmacro %}
