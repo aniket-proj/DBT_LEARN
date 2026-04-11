@@ -40,3 +40,5 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+    dbt_demo:
+      +materialized: table
